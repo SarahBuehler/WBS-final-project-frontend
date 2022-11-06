@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root {
+    /* Colors */
+    --main-color-default: hsl(111, 33%, 33%);
+    --main-color-light: hsl(111, 22%, 44%);
+    --secondary-color-default: hsl(222, 33%, 33%);
+    --secondary-color-light: hsl(222, 22%, 44%);
+    --text-color-default: hsl(333, 33%, 33%);
+    --text-color-light: hsl(333, 22%, 44%);
+    --body-background-color: white;
+    --title-color: hsl(888, 53%, 33%);
+    /* Font sizes */
+    --main-font: "Poppins", sans-serif;
+    --h1-font: 1.55rem;
+    --h2-font: 1.25rem;
+    --h3-font: 1.15rem;
+    --normal-size: 0.9rem;
+    --small-size: 0.7rem;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+    list-style: none;
+}
+html,
+body {
+    height: 100%;
+}
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+/* Set core body defaults */
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: var(--main-font);
+    font-size: var(--normal-size);
+    background-color: var(--body-background-color);
+    color: var(--text-color-default);
+    overflow-x: hidden;
+}
+input,
+body {
+    font-family: var(--main-font);
+    outline: none;
+    border: none;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--title-color);
+    font-weight: 600;
+}
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 999;
+    transition: 450ms;
+}
+.nav {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navlogo {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-weight: 900;
+    transition: 400ms;
+}
+.navlogo i {
+    font-size: 2.5rem;
+}
+
+.usermenu {
+    position: absolute;
+    right: 5%;
+    top: 2%;
+    z-index: 9999;
+}
+
+/* utility classes */
+.container {
+    max-width: 1080px;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+/* MOBILE-ANSICHT */
+@media only screen and (max-width: 767px) {
+    .navmenu {
+        position: fixed;
+        bottom: 1.3rem;
+        left: 0;
+        right: 0;
+        width: 95%;
+        margin: 0 auto;
+        padding: 0.15rem 0.9rem;
+        box-shadow: 0 3px 15px hsla(222, 96%, 60%);
+        border-radius: 100vmax;
+        transition: 400ms;
+    }
+    .navlist {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .navlink {
+        color: var(--text-color-default);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navlink i {
+        font-size: 1.8rem;
+        margin: -0.05rem;
+    }
+    .navlink span {
+        /* display: none; */
+        font-size: var(--small-size);
+        font-weight: 1000;
+        margin: -0.2rem;
+    }
+
+    .bootstrap_navbar {
+        display: none;
+    }
+
+    .slider {
+        z-index: 998;
+        position: fixed;
+        top: 3.2em;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+        /* margin-top: 54px; */
+        height: 60px;
+        /* background-color: transparent; */
+    }
+    .leaflet-control-geosearch form {
+        border-bottom: none;
+        top: 85px !important;
+    }
+    .leaflet-control-geosearch form input {
+        min-width: 480px;
+        outline: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+        font-size: 25px !important;
+        height: 50px !important;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        text-indent: 8px;
+    }
+    .leaflet-geosearch-bar {
+        position: relative;
+        display: block;
+        height: auto;
+        width: 500px !important;
+        max-width: calc(100% - 120px);
+        margin: 10px auto 0;
+        cursor: auto;
+        z-index: 1000;
+        font-size: 20px !important;
+    }
+}
+/* ######### DESKTOP ANSICHT ########## */
+@media only screen and (min-width: 768px) {
+    :root {
+        --main-font: "Poppins", sans-serif;
+        --h1-font: 2.25rem;
+        --h2-font: 1.95rem;
+        --h3-font: 1.85rem;
+        --normal-size: 1.5rem;
+        --small-size: 1.2rem;
+    }
+
+    .navlist {
+        display: none;
+    }
+
+    /* .nav-logo {
+        background-color: rgb(32, 103, 79);
+        border-radius: 50%;
+        padding: 40px;
+    } */
+
+    .box-image-nav {
+        height: auto;
+        width: 23%;
+    }
+
+    .slider {
+        z-index: 998;
+        position: fixed;
+        top: 3.9em;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+        /* margin-top: 54px; */
+        height: 60px;
+        /* background-color: transparent; */
+    }
+
+    .tag-button {
+        border-radius: 25px !important;
+        padding: 2px 0px !important;
+    }
+    /* ##### FOOTER #### */
+    .footer {
+        background-color: #343436 !important ;
+        width: 100vw;
+    }
+
+    .footer-link {
+        font-size: 1.2rem;
+        text-decoration: underline;
+    }
+
+    .copyright {
+        background-color: #292b2c;
+        /* background-color: transparent; */
+    }
+    .footer-vision {
+        margin-left: 15%;
+        margin-right: 10%;
+    }
+    .footer-contact {
+        margin-left: 20%;
+        margin-top: 4%;
+    }
+    .box-form {
+        /* border: solid;
+        border-radius: 2%;
+        padding: 2%; */
+        margin-bottom: 8%;
+    }
+    .box-image {
+        display: flex !important;
+        justify-content: center !important;
+        height: 200px;
+        width: auto;
+        margin-left: 7rem !important;
+        /* CENTER */
+    }
+}
+
+.leaflet-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.leaflet-control-geosearch {
+    border-bottom: none;
+    position: fixed !important;
+    left: calc(50% - 200px);
+}
+
+.form-map-container > .leaflet-container {
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+
+.form-map-container .leaflet-control-geosearch {
+    position: absolute !important;
+}
+
+button {
+    /* width: 60px; */
+    /* margin: 0 5px 0 5px;  */
+    justify-content: space-around;
+}
+
+/* Menu "list all my boxes" */
+
+.allBoxes > li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 1rem;
+}
+
+[class*="classic"]:before {
+    content: "Loading...";
+}
+
+.classic-2 {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 30px;
+    padding-bottom: 8px;
+    background: linear-gradient(currentColor 0 0) bottom left/0% 3px no-repeat;
+    animation: loading 1500ms linear infinite;
+}
+@keyframes loading {
+    to {
+        background-size: 100% 3px;
+    }
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.feedbackTextarea {
+    padding: 5px;
+}

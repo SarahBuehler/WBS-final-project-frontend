@@ -1,0 +1,64 @@
+{
+    "boxes": [
+        {
+            "id": 1,
+            "user_name": "Lorincz",
+            "longitude": 52.46057428543672,
+            "latitude": 13.533436982838912
+        },
+        {
+            "id": 2,
+            "user_name": "How",
+            "longitude": 52.45608816783987,
+            "latitude": 13.553107177477674
+        },
+        {
+            "id": 3,
+            "user_name": "Galle",
+            "longitude": 52.45079221278412,
+            "latitude": 13.54370871707024
+        },
+        {
+            "id": 4,
+            "user_name": "Bentley",
+            "longitude": 52.45116412132604,
+            "latitude": 13.54699212300989
+        },
+        {
+            "id": 5,
+            "user_name": "Blake",
+            "longitude": 52.46381002657543,
+            "latitude": 13.519381938151637
+        },
+        {
+            "id": 6,
+            "user_name": "Nafzger",
+            "longitude": 52.45074938807895,
+            "latitude": 13.523871782159997
+        },
+        {
+            "id": 7,
+            "user_name": "Grog",
+            "longitude": 52.44972899989397,
+            "latitude": 13.577692874154096
+        },
+        {
+            "id": 8,
+            "user_name": "Tomenson",
+            "longitude": 52.43560564859723,
+            "latitude": 13.586123321205845
+        },
+        {
+            "id": 9,
+            "user_name": "Burgiss",
+            "longitude": 52.4349833688786,
+            "latitude": 13.556114604310334
+        },
+        {
+            "id": 10,
+            "user_name": "Michin",
+            "longitude": 52.47983732556858,
+            "latitude": 13.522551937726561
+        }
+    ]
+}
